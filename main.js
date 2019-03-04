@@ -165,7 +165,7 @@ function fullySendCommand(ip, strCommand) {
     var getHost = getHostForSet(ip);
     var ip      = getHost[0];
     var port    = getHost[1];
-    var psw     = getHost[2];
+    var psw     = encodeURIComponent(getHost[2]);
 
     var options = {
         url: 'http://' + ip + ':' + port + '/?cmd=' + strCommand + '&password=' + psw
